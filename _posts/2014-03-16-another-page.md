@@ -1,7 +1,7 @@
 ---
 layout: default
-title:  "Welcome to Jekyll!"
-date:   2014-04-20 09:11:03
+title:  "Anothe post"
+date:   2016-03-22
 permalink: /blog/:year/:month/:day/:title/
 ---
 <h1>{{page.title}}</h1>

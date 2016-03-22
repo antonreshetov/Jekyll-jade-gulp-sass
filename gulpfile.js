@@ -4,6 +4,7 @@ var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var jade        = require('gulp-jade');
 var cp          = require('child_process');
+var watch 			= require('gulp-watch');
 var merge 			= require('merge-stream');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
@@ -67,6 +68,21 @@ gulp.task('jade', function() {
 		return merge(jadeInclude, jadeLayouts);
 });
 
+/*
+* Copy add assets files to _site without jekyll rebuild
+*/
+
+gulp.task('copyfile', function() {
+		var img = gulp.src('assets/img/*.*')
+		.pipe(watch('assets/img/*.*'))
+		.pipe(gulp.dest('_site/assets/img'));
+		var js = gulp.src('assets/js/*.*')
+		.pipe(watch('assets/js/*.*'))
+		.pipe(gulp.dest('_site/assets/js'));
+
+		return merge(img, js);
+});
+
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
@@ -81,4 +97,4 @@ gulp.task('watch', function () {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['browser-sync', 'watch', 'jade']);
+gulp.task('default', ['browser-sync', 'watch', 'jade', 'copyfile']);

@@ -1,4 +1,4 @@
-jekyll-gulp-jade-scss-browser-sync
+Jekyll Jade Gulp Sass - StartKit
 =============================
 
 A starter project including full setup for Jekyll, GulpJS, Jade, SCSS, AutoPrefixer &amp; BrowserSync

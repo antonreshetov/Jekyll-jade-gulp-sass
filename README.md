@@ -1,4 +1,4 @@
-Jekyll Jade Gulp Sass - StartKit
+Jekyll Jade Sass Gulp - StartKit
 =============================
 
 A StartKit including full setup for Jekyll, GulpJS, Jade, Sass, AutoPrefixer &amp; BrowserSync.

@@ -3,7 +3,7 @@ Jekyll Jade Gulp Sass - StartKit
 
 A StartKit including full setup for Jekyll, GulpJS, Jade, Sass, AutoPrefixer &amp; BrowserSync.
 
-Tools include [Kube](https://imperavi.com/kube/) CSS Framework v.5 &amp; [Flexiblegs](http://flexible.gs/) Flexible Grid System v2.3.5
+Tools include [Kube](https://imperavi.com/kube/) CSS Framework v5.0 &amp; [Flexiblegs](http://flexible.gs/) Flexible Grid System v2.3.5
 
 ## System Preparation
 

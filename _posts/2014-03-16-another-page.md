@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "Anothe post"
+title:  "Another post"
 date:   2016-03-22
 permalink: /blog/:year/:month/:day/:title/
 ---

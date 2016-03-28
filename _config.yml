@@ -1,3 +1,11 @@
 name: Your New Jekyll Site
 markdown: kramdown
-exclude: ["node_modules", "gulpfile.js", "package.json", "README.md"]
+include: [
+    "_page"
+  ]
+exclude: [
+    "node_modules",
+    "gulpfile.js",
+    "package.json",
+    "README.md"
+  ]

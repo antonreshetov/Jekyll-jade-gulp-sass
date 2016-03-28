@@ -89,7 +89,7 @@ gulp.task('copyfile', function() {
  */
 gulp.task('watch', function () {
     gulp.watch('assets/_scss/**/*.scss', ['sass']);
-    gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '_layouts/*.html', '_posts/*', '_pages/*'], ['jekyll-rebuild']);
     gulp.watch(['_jade/**/*.jade'], ['jade', 'jekyll-rebuild']);
 });
 

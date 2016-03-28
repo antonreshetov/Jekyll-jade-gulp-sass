@@ -6,6 +6,7 @@ var jade        = require('gulp-jade');
 var cp          = require('child_process');
 var watch       = require('gulp-watch');
 var merge       = require('merge-stream');
+var htmlpretty  = require('gulp-prettify');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -81,6 +82,15 @@ gulp.task('copyfile', function() {
     .pipe(gulp.dest('_site/assets/js'));
 
     return merge(img, js);
+});
+
+/*
+* HTML Prettify
+*/
+gulp.task('htmlpretty', function() {
+  gulp.src('_site/**/*.html')
+    .pipe(htmlpretty({indent_size: 2, wrap_line_length: 0}))
+    .pipe(gulp.dest('_site'));
 });
 
 /**
